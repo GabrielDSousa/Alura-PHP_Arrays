@@ -50,7 +50,7 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
     <h3>Third lesson, removing a element  of a array</h3>
     <p>The array is a psychotic thing like: ["Giovanni", "John", 12, "Maria", 25, "Luis", "Luisa", "12", "Rafael",]</p>
     <ul>
-        <li>Removing the "Giovani"</li>
+        <li>Removing the "Giovani"
             <p><b>
                 <?php
                 foreach ($psychotic_array as $item){
@@ -58,8 +58,9 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
                 }
                 ?>
             </b></p>
+        </li>
 
-        <li>Removing the "12", not the 12</li>
+        <li>Removing the "12", not the 12
             <p><b>
                 <?php
                 $psychotic_array = ArrayUtils::remove("12", $psychotic_array);
@@ -68,8 +69,9 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
                 }
                 ?>
             </b></p>
+        </li>
 
-        <li>Removing the 12, not the "12"</li>
+        <li>Removing the 12, not the "12"
             <p><b>
                 <?php
                 $psychotic_array = ArrayUtils::remove(12, $psychotic_array);
@@ -78,6 +80,7 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
                 }
                 ?>
             </b></p>
+        </li>
     </ul>
 
 
