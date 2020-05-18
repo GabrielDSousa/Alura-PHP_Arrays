@@ -3,6 +3,7 @@
 use ClassLessons\ArrayUtils;
 use ClassLessons\Calculator;
 
+//fourth lesson
 require 'autoloader.php';
 
 //first lesson
@@ -18,6 +19,13 @@ $report_imploded = implode(', ',$report);
 //third lesson
 $psychotic_array = ["Giovanni", "John", 12, "Maria", 25, "Luis", "Luisa", "12", "Rafael"];
 $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
+
+//fifth lesson
+$holders = ['Giovanni', 'João', 'Maria', 'Luis', 'Luisa', 'Rafael'];
+$holdersWithDebts = ['Luis', 'Luisa', 'Rafael'];
+$currentHolders = array_diff($holders, $holdersWithDebts);
+$amounts = [100, 200, 300];
+$holdersWithAmount = array_combine($currentHolders, $amounts);
 ?>
 
 <!doctype html>
@@ -31,12 +39,14 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
 </head>
 <body>
     <h1>Php Arrays</h1>
+    <br>
     <h2>First lesson, create a school report average calculator:</h2>
+    <p>The school report is: <?=$report_imploded?></p>
     <p>The <b>average</b> of the school report is: <?=$average?></p>
+
     <br><br>
     <h2>Second lesson, explode and implode:</h2>
     <h3>Explode</h3>
-    <br>
     <h4>A string of name exploded as array, and iterated</h4>
     <ul>
         <?php foreach ($names_array as $name){?>
@@ -44,10 +54,10 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
         <?php } ?>
     </ul>
     <h3>Implode</h3>
-    <br>
     <p>School report imploded in a string: <?=$report_imploded?></p>
+
     <br><br>
-    <h3>Third lesson, removing a element  of a array</h3>
+    <h2>Third lesson, removing a element  of a array</h2>
     <p>The array is a psychotic thing like: ["Giovanni", "John", 12, "Maria", 25, "Luis", "Luisa", "12", "Rafael",]</p>
     <ul>
         <li>Removing the "Giovani"
@@ -83,8 +93,18 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
         </li>
     </ul>
 
+    <br><br>
+    <h2>Fourth lesson, autoload implementation</h2>
 
-
-
+    <br><br>
+    <h2>Fifth lesson, associative array</h2>
+    <p>Here a list of the current holders on a simple bank:</p>
+    <ul>
+        <?php
+            foreach ($holdersWithAmount as $holder=>$amount){
+                echo "<li>$holder: $amount</li>";
+            }
+        ?>
+    </ul>
 </body>
 </html>
