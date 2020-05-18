@@ -1,5 +1,6 @@
 <?php
 
+namespace ClassLessons;
 
 class Calculator
 {
@@ -10,7 +11,7 @@ class Calculator
             foreach ($schoolReport as $number){
                 $sum += $number;
             }
-            
+
             return $sum/sizeof($schoolReport);
         }
 

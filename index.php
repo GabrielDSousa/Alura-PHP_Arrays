@@ -1,6 +1,9 @@
 <?php
-require 'Calculator.php';
-require 'ArrayUtils.php';
+
+use ClassLessons\ArrayUtils;
+use ClassLessons\Calculator;
+
+require 'autoloader.php';
 
 //first lesson
 $report = [6,7,8,7,8,5,9];
@@ -45,35 +48,40 @@ $psychotic_array = ArrayUtils::remove("Giovanni", $psychotic_array);
     <p>School report imploded in a string: <?=$report_imploded?></p>
     <br><br>
     <h3>Third lesson, removing a element  of a array</h3>
-    <p>The array is a psychotic thing like: ["Giovanni", "John", 12, "Maria", 25, "Luis", "Luisa", "12", "Rafael"]</p>
-    <p>Removing the "Giovani"</p>
-    <p>
-        <?php
-        foreach ($psychotic_array as $item){
-            echo "$item, ";
-        }
-        ?>
-    </p>
+    <p>The array is a psychotic thing like: ["Giovanni", "John", 12, "Maria", 25, "Luis", "Luisa", "12", "Rafael",]</p>
+    <ul>
+        <li>Removing the "Giovani"</li>
+            <p><b>
+                <?php
+                foreach ($psychotic_array as $item){
+                    echo "$item, ";
+                }
+                ?>
+            </b></p>
 
-    <p>Removing the "12", not the 12</p>
-    <p>
-        <?php
-        $psychotic_array = ArrayUtils::remove("12", $psychotic_array);
-        foreach ($psychotic_array as $item){
-            echo "$item, ";
-        }
-        ?>
-    </p>
+        <li>Removing the "12", not the 12</li>
+            <p><b>
+                <?php
+                $psychotic_array = ArrayUtils::remove("12", $psychotic_array);
+                foreach ($psychotic_array as $item){
+                    echo "$item, ";
+                }
+                ?>
+            </b></p>
 
-    <p>Removing the 12, not the "12"</p>
-    <p>
-        <?php
-        $psychotic_array = ArrayUtils::remove(12, $psychotic_array);
-        foreach ($psychotic_array as $item){
-            echo "$item, ";
-        }
-        ?>
-    </p>
+        <li>Removing the 12, not the "12"</li>
+            <p><b>
+                <?php
+                $psychotic_array = ArrayUtils::remove(12, $psychotic_array);
+                foreach ($psychotic_array as $item){
+                    echo "$item, ";
+                }
+                ?>
+            </b></p>
+    </ul>
+
+
+
 
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+namespace ClassLessons;
+
 class ArrayUtils
 {
     public static function remove($element, array &$array): array
