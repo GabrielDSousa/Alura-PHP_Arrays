@@ -28,4 +28,5 @@ php -S localhost:8081
 Now go to browser and look at the lessons made with arrays
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/GabrielDSousa/PHP_Arrays/blob/master/LICENSE.md)
+
